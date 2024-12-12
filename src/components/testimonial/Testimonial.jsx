@@ -95,8 +95,8 @@ const Testimonial = () => {
            </h1>
            </div>
            <div>
-            <blockquote class=" dark:bg-black pr-8 pb-12 pt-10 rounded-3xl relative">
-          <p class=" mt-2 text-black dark:text-slate-400 before:content-['\201C'] before:font-serif before:absolute before:top-0 before:left-0 before:text-9xl before:text-black before:opacity-25 before:transform before:translate-x-2 before:translate-y-2 after:content-['\201D'] after:font-serif after:absolute after:-bottom-25 after:right-3 after:text-9xl after:text-black after:opacity-25 after:transform after:translate-x-2 after:translate-y-2">
+            <blockquote class="  pr-8 pb-12 pt-10 rounded-3xl relative">
+          <p class=" mt-2 text-black dark:text-slate-400 before:content-['\201C'] before:font-serif before:absolute before:top-0 before:left-0 before:text-9xl before:opacity-25 before:transform before:translate-x-2 before:translate-y-2 after:content-['\201D'] after:font-serif after:absolute after:-bottom-25 after:right-3 after:text-9xl  after:opacity-25 after:transform after:translate-x-2 after:translate-y-2">
              {testi.description}       
           </p>
     

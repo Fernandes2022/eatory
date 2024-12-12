@@ -36,10 +36,11 @@ const Navbar = () => {
  }
 
   return (
-    <header className="bg-blue-100">
-     <nav className='container'>
+   <>
+    <header className="bg-blue-100 ">
+     <nav className='container  '>
        <div data-aos="fade-up" data-aos-once="true" data-aos-delay="500"
- className="flex  justify-between px-6 items-center p-4">
+        className="flex  justify-between px-6 items-center p-4">
         
         <div>
          <img   src={logo} className='w-32 h-20' alt="" />
@@ -47,7 +48,7 @@ const Navbar = () => {
         </div>
 
         <div className="hidden sm:block ">
-         <ul className='flex gap-6 text-slate-500 text-md font-semibold'>
+         <ul className='flex gap-6 text-slate-500  font-semibold'>
           {menu.map((item) => (
            <li>
             <a href={item.link}>{item.name}</a>
@@ -56,26 +57,33 @@ const Navbar = () => {
          </ul>
         </div>
 
-        <div className='sm:hidden'>
+        <div className='sm:hidden '>
          <button onClick={handleMenu} className='text-3xl text-slate-500'>
           {menuOpen ? <X/> : <Menu />}
          </button>
 
-         <div className="absolute top-28 right-12">
-          {menuOpen && 
-          <ul className='flex flex-col gap-6 text-slate-500 text-md font-semibold bg-white shadow-2xl p-6 py-10'>
-          {menu.map((item) => (
-           <li>
-            <a href={item.link}>{item.name}</a>
-           </li>
-          ))}
-         </ul>
-          }
-         </div>
+         
+          
+         
         </div>
        </div>
      </nav>
+
+     {menuOpen && 
+          (
+           <div>
+             <ul className='bg-white space-y-3 p-4 rounded-md shadow-md absolute right-10 top-24  z-50 '>
+          {menu.map((item) => (
+           <li>
+            <a className='inline-block text-xl p-4 w-full rounded-md' href={item.link}>{item.name}</a>
+           </li>
+          ))}
+         </ul>
+           </div>
+          )
+          }
     </header>
+   </>
   )
 }
 

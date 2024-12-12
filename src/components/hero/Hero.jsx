@@ -4,16 +4,16 @@ import hero from '../../assets/hero.png'
 const Hero = () => {
   return (
    <>
-    <section id='home' className="bg-blue-100 scroll-mt-28 min-h-screen">
-     <div className="container flex">
-       <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 pt-16 px-6 pl-10">
-        <div className="flex flex-col gap-2 justify-center items-center sm:items-start" data-aos="fade-up" data-aos-delay="300">
-          <h1 className="bg-clip-text  font-serif text-8xl bg-gradient-to-b from-blue-800 to-blue-400 text-transparent">
+    <section id='home' className="bg-blue-100  scroll-mt-28 min-h-screen ">
+     <div className="container flex ">
+       <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 pt-16 px-6 pl-10 ">
+        <div className="flex flex-col gap-2 justify-center items-center sm:items-start " data-aos="fade-up" data-aos-delay="300">
+          <h1 className="bg-clip-text  font-serif text-8xl bg-gradient-to-b from-blue-800 to-blue-400 text-transparent ">
            Rice
            <span className='text-sm text-black font-bold'>Bowl</span>
           </h1>
 
-          <p className='text-slate-700'>
+          <p className='text-slate-700 '>
            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non atque at assumenda quod aliquid iusto voluptates, officia numquam dolorem eveniet, minus amet debitis itaque!
           </p>
 
