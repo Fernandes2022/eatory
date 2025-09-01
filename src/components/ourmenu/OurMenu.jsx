@@ -8,26 +8,26 @@ import hero from '../../assets/hero.png'
 const menuData = [
  {
   id: '1',
-  name: "Noodle Soup",
-  price: "$ 299",
+  name: "House Noodle Soup",
+  price: "$12",
   img: food2
  },
  {
   id: '2',
-  name: "Pepper Soup",
-  price: "$ 20",
+  name: "Spicy Pepper Soup",
+  price: "$10",
   img: banner
  },
  {
   id: '3',
-  name: "Rice",
-  price: "$ 35",
+  name: "Signature Rice Bowl",
+  price: "$14",
   img: hero
  },
  {
   id: '4',
-  name: "Pepper Soup",
-  price: "$ 20",
+  name: "Coconut Curry Bowl",
+  price: "$13",
   img: banner
  }
 ]
@@ -76,7 +76,7 @@ const OurMenu = () => {
 
   return (
     <>
-    <section className="py-16 bg-blue-700">
+    <section id="menu" className="py-16 bg-slate-900">
      <div className="container">
       <div className="flex flex-col  gap-10 text-white px-8">
        <div className="flex flex-col gap-4  text-center" data-aos="fade-up" data-aos-delay="500">
@@ -84,17 +84,17 @@ const OurMenu = () => {
          Our Menu
         </h1>
 
-        <p className='text-sm'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore voluptas esse voluptatum architecto atque vitae rerum libero nihil quae quos.</p>
+        <p className='text-sm'>From hearty classics to light bites, our chef‑curated bowls are crafted with seasonal produce and bold, comforting flavors.</p>
        </div>
 
        <div >
         
         <Slider {...settings}>
         {menuData.map((item) => (
-          <div className="my-16" data-aos="zoom-in" data-aos-delay="600">
+          <div className="my-16" data-aos="zoom-in" data-aos-delay="600" key={item.id}>
            <div className="flex items-center  flex-col gap-4 py-8 px-6 mx-4 rounded-xl">
              <div className='mb-3 flex '>
-              <img className='w-auto rounded-full sm:max-w-[200px] md:max-w-[250px] ' src={item.img} alt="" />
+              <img className='w-auto rounded-full sm:max-w-[200px] md:max-w-[250px] ' src={item.img} alt={item.name} />
              </div>
              <div>
               <h1 className="text-xl">
@@ -107,8 +107,8 @@ const OurMenu = () => {
               </h1>
              </div>
              <div>
-              <a href='#home' className='underline'>
-               Buy Now
+              <a href='#contact' className='underline'>
+               Order now
               </a>
              </div>
           </div>

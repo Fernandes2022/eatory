@@ -1,30 +1,14 @@
 import React, { useState } from 'react'
-import logo from '../../assets/logo.png'
 import { Menu, X } from 'lucide-react';
 
 
 
 const menu = [
- {
-  name: 'Noodle Soup',
-  link: '#home'
- },
- {
-  name: 'Rice Bowls',
-  link: '#home'
- },
- {
-  name: 'Salad Bowls',
-  link: '#home'
- },
- {
-  name: 'Beverages',
-  link: '#home'
- },
- {
-  name: 'Kids',
-  link: '#home'
- }
+ { name: 'Home', link: '#home' },
+ { name: 'Menu', link: '#menu' },
+ { name: 'About', link: '#about' },
+ { name: 'Testimonials', link: '#testimonials' },
+ { name: 'Contact', link: '#contact' },
 ]
 
 const Navbar = () => {
@@ -37,28 +21,27 @@ const Navbar = () => {
 
   return (
    <>
-    <header className="bg-blue-100 ">
-     <nav className='container  '>
+    <header className="bg-white/70 backdrop-blur supports-[backdrop-filter]:bg-white/50 sticky top-0 z-50 border-b border-slate-100">
+     <nav className='container'>
        <div data-aos="fade-up" data-aos-once="true" data-aos-delay="500"
-        className="flex  justify-between px-6 items-center p-4">
+        className="flex justify-between px-6 items-center p-4">
         
-        <div>
-         <img   src={logo} className='w-32 h-20' alt="" />
-         
-        </div>
+        <a href="#home" className="select-none">
+          <span className='font-serif text-2xl md:text-3xl bg-clip-text text-transparent bg-gradient-to-r from-amber-600 to-amber-800'>Eatory</span>
+        </a>
 
         <div className="hidden sm:block ">
-         <ul className='flex gap-6 text-slate-500  font-semibold'>
-          {menu.map((item) => (
-           <li>
-            <a href={item.link}>{item.name}</a>
+         <ul className='flex gap-6 text-slate-700 font-medium'>
+          {menu.map((item, idx) => (
+           <li key={idx}>
+            <a className='hover:text-amber-700 transition-colors' href={item.link}>{item.name}</a>
            </li>
           ))}
          </ul>
         </div>
 
         <div className='sm:hidden '>
-         <button onClick={handleMenu} className='text-3xl text-slate-500'>
+         <button onClick={handleMenu} className='text-3xl text-slate-700'>
           {menuOpen ? <X/> : <Menu />}
          </button>
 
@@ -73,9 +56,9 @@ const Navbar = () => {
           (
            <div>
              <ul className='bg-white space-y-3 p-4 rounded-md shadow-md absolute right-10 top-24  z-50 '>
-          {menu.map((item) => (
-           <li>
-            <a className='inline-block text-xl p-4 w-full rounded-md' href={item.link}>{item.name}</a>
+          {menu.map((item, idx) => (
+           <li key={idx}>
+            <a className='inline-block text-xl p-4 w-full rounded-md hover:text-amber-700' href={item.link}>{item.name}</a>
            </li>
           ))}
          </ul>
